@@ -2,6 +2,32 @@
 my dataset
    
    修改数据格式为COCO，VOC等
+   1:初始化类别数量参数 
+     src/lib/datasets/utils/opts.py 
+       def init(self, args=''):
+   
+   2:初始化类别名称参数 
+     src/lib/datasets/utils/debugger.py 
+       coco_class_name = ['traffic']
+
+   3：coco数据集处理
+     /src/lib/datasets/dataset/coco.py
+	class COCO(data.Dataset):
+	  #0721 
+	  num_classes = 10
+
+
+
+
+
+
+
+
+
+
+
+
+
    1：主要目录
    2：coco_class_name： path：CenterNet/src/lib/utils/debugger.py
       类别，类别数目
